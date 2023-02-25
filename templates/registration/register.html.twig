@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+{% block css %}{{ asset("assets/css/connexion.css") }}{% endblock %}
+
+{% block body %}
+<div class="photo"></div>
+
+<!-- <form action="{{ path('app_register') }}" method="post">
+        <h1>S'enregistrer</h2>
+        <div class="inputBox">
+            <input type="text" required="required">
+            <span>E-mail</span>
+        </div>
+        <div class="inputBox">
+            <input type="password" required="required">
+            <span>Password</span>
+        </div>
+        <div class="inputButton">
+            <input type="submit" value="Envoyer" class="btn btn-dark">
+        </div>
+        <p>Si vous avez déja un compte, rendez vous <a href="{{ path("app_login") }}">ici</a></p>
+        <p>Retour à l'accueil <a href="{{ path("app_home") }}">ici</a></p>
+    </form> -->
+
+    <form action="{{ path('app_register') }}" method="post">
+      {{ form_start(form) }}
+          <h1>S'enregistrer</h1>
+        <div class="inputBox">
+          <label for="email">E-mail</label>
+          {{ form_widget(form.email) }}
+        </div>
+        <div class="inputBox">
+          {{ form_widget(form.password) }}
+        </div>
+        <div class="inputButton">
+          {{ form_widget(form.submit) }}
+        </div>
+          <p>Si vous avez déja un compte, rendez vous <a href="{{ path("app_login") }}">ici</a></p>
+          <p>Retour à l'accueil <a href="{{ path("app_home") }}">ici</a></p>
+          {{ form_end(form) }}
+  </form>
+  
+
+{% endblock %}
