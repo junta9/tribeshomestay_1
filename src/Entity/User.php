@@ -134,23 +134,4 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
-    // /**
-    //  * Get the value of password_confirm
-    //  */ 
-    // public function getPassword_confirm(): ?string
-    // {
-    //     return $this->password_confirm;
-    // }
-
-    // /**
-    //  * Set the value of password_confirm
-    //  *
-    //  * @return  self
-    //  */ 
-    // public function setPassword_confirm($password_confirm): self
-    // {
-    //     $this->password_confirm = $password_confirm;
-
-    //     return $this;
-    // }
 }
