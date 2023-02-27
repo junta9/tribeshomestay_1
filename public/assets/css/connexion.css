@@ -13,10 +13,11 @@ body {
   min-height: 100vh;
 }
 .photo {
-  background-image: url("../../assets/images/rice-fields-g65d4ea483_1920.jpg");
+  background-image: url("/assets/images/rice-fields-g65d4ea483_1920.jpg");
   width: 50%;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 form {
   width: 50%;
