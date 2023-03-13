@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Pays;
 use App\Entity\Photo;
+use App\Entity\PhotosSejours;
 use App\Entity\Sejour;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -32,7 +33,7 @@ class DashboardController extends AbstractDashboardController
     {
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
         yield MenuItem::linkToCrud('User', 'fas fa-list', User::class);
-        // yield MenuItem::linkToCrud('Pays', 'fas fa-list', Pays::class);
-        // yield MenuItem::linkToCrud('Séjour', 'fas fa-list', Sejour::class);
+        yield MenuItem::linkToCrud('Séjour', 'fas fa-list', Sejour::class);
+        yield MenuItem::linkToCrud('Photos', 'fas fa-list', PhotosSejours::class);
     }
 }

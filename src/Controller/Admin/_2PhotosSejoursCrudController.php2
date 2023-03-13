@@ -1,0 +1,30 @@
+<?php
+
+namespace App\Controller\Admin;
+
+use App\Entity\PhotosSejours;
+use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
+
+class PhotosSejoursCrudController extends AbstractCrudController
+{
+    public static function getEntityFqcn(): string
+    {
+        return PhotosSejours::class;
+    }
+
+    
+    public function configureFields(string $pageName): iterable
+    {
+        return [
+            IdField::new('sejour_id'),
+            ImageField::new("imageFile")
+            ->setBasePath("images/photos_sejours")
+            ->setUploadDir("public/images/photos_sejours")
+        ];
+    }
+    
+}

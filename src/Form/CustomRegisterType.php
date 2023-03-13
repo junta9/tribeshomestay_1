@@ -4,6 +4,7 @@ namespace App\Form;
 
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
@@ -32,13 +33,13 @@ class CustomRegisterType extends AbstractType
             'first_options' => [
                 'label' => 'Mot de passe',
                 'attr' => [
-                    'class' => 'inputBox'
+                    'class' => 'myPass'
                 ]
             ],
             'second_options' => [
                 'label' => 'Répéter le mot de passe',
                 'attr' => [
-                    'class' => 'inputBox'
+                    'class' => 'myPass'
                 ]
             ]
         ])

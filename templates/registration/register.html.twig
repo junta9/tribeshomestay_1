@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Register{% endblock %}
-{% block css %}{{ asset("assets/css/connexion.css") }}{% endblock %}
+{% block css %}{{ asset("/assets/css/connexion.css") }}{% endblock %}
 
 {% block body %}
 <div class="photo"></div>
@@ -15,6 +15,9 @@
         <div class="inputBox">
             <input type="password" required="required">
             <span>Password</span>
+        </div>
+        <div>
+            <input id="checkBox" type="checkbox" onclick="showPass()">Show Password
         </div>
         <div class="inputButton">
             <input type="submit" value="Envoyer" class="btn btn-dark">
@@ -32,6 +35,9 @@
         </div>
         <div class="inputBox">
           {{ form_widget(form.password) }}
+        </div>
+        <div>
+            <input id="checkBox" type="checkbox" onclick="showPass()">Show Password
         </div>
         <div class="inputButton">
           {{ form_widget(form.submit) }}

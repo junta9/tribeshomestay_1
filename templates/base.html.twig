@@ -7,13 +7,13 @@
     <title>{% block title %}Tribeshomestay{% endblock %}</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="{% block css %}{{ asset("assets/css/style.css") }}{% endblock %}">
+    <link rel="stylesheet" href="{% block css %}{{ asset("/assets/css/style.css") }}{% endblock %}">
 </head>
 
 <body>
     {% block body %}
     <header>
-        <nav class="navbar navbar-dark bg-dark fixed-top">
+        <nav class="navbar navbar-dark bg-dark fixed-top" id="menuScroll">
             <div class="container-fluid justify-content-end w-100">
                 <div class="d-flex w-100 col">
                     <div class="d-flex brand">
@@ -22,7 +22,8 @@
                     <div class="d-flex justify-content-end px-3 col align-items-center">
                         {% if is_granted('ROLE_USER') %}
                         <li class="nav-item btn dropdown menu-btn">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mon compte</a>
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">Mon compte</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="">Informations personnelles</a></li>
                                 <li><a class="dropdown-item" href="#!">Mes commandes</a></li>
@@ -142,11 +143,13 @@
                             Venez découvrir les Hmong en haut des montagnes entouré de rizières en terrasse.
                         </p>
                         <div class="prix-details">
-                            <p>
-                                Prix: 40 € la chambre de 4 lits<br>
-                                Durée minimum: 2 nuits
+                            <p class="font-outfit">
+                                Séjour de 4 nuits<br>
+                                Du lundi au vendredi<br>
+                                Chambre de 6 couchages<br>
+                                Prix de séjour: 300 €
                             </p>
-                            <a href="#" class="btn">Réserver</a>
+                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#joinModal2">Réserver</a>
                         </div>
                     </div>
                 </article>
@@ -175,18 +178,20 @@
                             Venez découvrir les Karen et leur culture, qui inclut des femmes au long cou.
                         </p>
                         <div class="prix-details">
-                            <p>
-                                Prix: 40 € la chambre de 4 lits<br>
-                                Durée minimum: 2 nuits
+                            <p class="font-outfit">
+                                Séjour de 4 nuits<br>
+                                Du lundi au vendredi<br>
+                                Chambre de 6 couchages<br>
+                                Prix de séjour: 300 €
                             </p>
-                            <a href="#" class="btn">Réserver</a>
+                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#joinModal2">Réserver</a>
                         </div>
                     </div>
                 </article>
             </div>
             <div class="trait"></div>
         </section>
-        
+
         <section class="container-fluid mt-4" id="laos">
             <div class="description text-center">
                 <h2>Nos séjours au Laos</h2>
@@ -218,11 +223,13 @@
                             Venez découvrir les Hmongs en haut des montagnes entouré de rizières en terrasse.
                         </p>
                         <div class="prix-details">
-                            <p>
-                                Prix: 40 € la chambre de 4 lits<br>
-                                Durée minimum: 2 nuits
+                            <p class="font-outfit">
+                                Séjour de 4 nuits<br>
+                                Du lundi au vendredi<br>
+                                Chambre de 6 couchages<br>
+                                Prix de séjour: 300 €
                             </p>
-                            <a href="#" class="btn">Réserver</a>
+                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#joinModal2">Réserver</a>
                         </div>
                     </div>
                 </article>
@@ -250,18 +257,19 @@
                         Venez découvrir les Akha et leur plantations de café et de thé.
                     </p>
                     <div class="prix-details">
-                        <p>
-                            Prix: 10 €/personnes et par nuit<br>
-                            8 personnes maximum<br>
-                            Durée minimum: 2 nuits
-                        </p>
-                        <a href="#" class="btn">Réserver</a>
+                        <p class="font-outfit">
+                                Séjour de 4 nuits<br>
+                                Du lundi au vendredi<br>
+                                Chambre de 6 couchages<br>
+                                Prix de séjour: 300 €
+                            </p>
+                        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#joinModal2">Réserver</a>
                     </div>
                 </article>
             </div>
             <div class="trait"></div>
         </section>
-        
+
         <section class="container-fluid mt-4" id="vietnam">
             <div class="description text-center">
                 <h2>Nos séjours au Vietnam</h2>
@@ -293,11 +301,13 @@
                             Venez découvrir les Hmong en haut des montagnes entouré de rizières en terrasse.
                         </p>
                         <div class="prix-details">
-                            <p>
-                                Prix: 40 € la chambre de 4 lits<br>
-                                Durée minimum: 2 nuits
+                            <p class="font-outfit">
+                                Séjour de 4 nuits<br>
+                                Du lundi au vendredi<br>
+                                Chambre de 6 couchages<br>
+                                Prix de séjour: 300 €
                             </p>
-                            <a href="#" class="btn">Réserver</a>
+                            <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#joinModal2">Réserver</a>
                         </div>
                     </div>
                 </article>
@@ -326,12 +336,13 @@
                         Venez découvrir les Lolos noir
                     </p>
                     <div class="prix-details">
-                        <p>
-                            Prix: 10 €/personnes et par nuit<br>
-                            8 personnes maximum<br>
-                            Durée minimum: 2 nuits
-                        </p>
-                        <a href="#" class="btn">Réserver</a>
+                        <p class="font-outfit">
+                                Séjour de 4 nuits<br>
+                                Du lundi au vendredi<br>
+                                Chambre de 6 couchages<br>
+                                Prix de séjour: 300 €
+                            </p>
+                        <a href="#" class="btn" data-bs-toggle="modal" data-bs-target="#joinModal2">Réserver</a>
                     </div>
                 </article>
             </div>
@@ -397,11 +408,11 @@
                             <label for="name">Nom</label>
                             <input type="text" class="form-control" id="name" name="name" />
                         </div>
-                        <div class="m-3">                           
+                        <div class="m-3">
                             <label for="email">E-mail</label>
                             <input type="email" class="form-control" id="email" name="email" />
                         </div>
-                        <div class="m-3">                         
+                        <div class="m-3">
                             <label for="message">Message</label>
                             <textarea class="form-control" id="message" name="message" rows="3"></textarea>
                         </div>
@@ -475,6 +486,7 @@
         </div>
     </div>
     {% endblock %}
+    <script src="{{ asset("assets/js/script.js") }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
